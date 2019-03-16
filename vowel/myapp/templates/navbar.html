@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+
+    <style media="screen">
+      td:hover{
+        background-color: #b9c1ce
+      }
+      th:hover{
+        background-color: #b9c1ce
+      }
+      .j1{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" href="{% url "home"%}">Django app</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "home"%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "about"%}">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+
+  </body>
+</html>

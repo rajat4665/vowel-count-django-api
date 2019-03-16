@@ -1,0 +1,70 @@
+{% extends 'navbar.html'%}
+{% block content %}
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="jumbotron j1">
+      <h1>Hello this is a basic django api </h1>
+      <br>
+      <h2> It will calculate count of vowels in your txt file.</h2>
+      <br>
+      {% if uploaded_file_url %}
+
+      {% else %}
+
+
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="myfile">
+          <button type="submit">Upload</button>
+        </form>
+        <br>
+        <br>
+        <h3>please upload only tex file <h3>
+      {% endif %}
+      <br>
+        {% if uploaded_file_url %}
+        <hr>
+        <p>{{filename.upper}} is uploaded successfully</p>
+        <hr>
+      <table border="1" style='width:70%;height:400px;margin:auto'>
+        <thead>
+          <th><h2>Letter</h2></th>
+          <th><h2>occurrence</h2></th>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Total number of vovels</td>
+            <td>{{total_num_vovels}}</td>
+          </tr>
+          <tr>
+            <td>Total number of A</td>
+            <td>{{A_for}}</td>
+          </tr>
+          <tr>
+            <td>Total number of E</td>
+            <td>{{E_for}}</td>
+          </tr>
+          <tr>
+            <td>Total number of I</td>
+            <td>{{I_for}}</td>
+          </tr>
+          <tr>
+            <td>Total number of O</td>
+            <td>{{O_for}}</td>
+          </tr>
+          <tr>
+            <td>Total number of I</td>
+            <td>{{U_for}}</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+        {% endif %}
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

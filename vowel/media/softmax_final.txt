@@ -1,0 +1,20 @@
+softmax_final
+=============
+Softmax Function
+================
+The input to a softmax activation function is a logit score and outut is the probability. If you sum up the probability, it will be one. Softmax is an activation function which is used in classification. The output of softmax layer depends on the logits and these logits are called score. Softmax layer is exponential. The main function of softmax layer is to turn logits into probability. Cost function used is crossentropy and the target is one hot encoder. Cross entropy is calculated between logits and labels. Labels are also called as targets. Labels are one hot encoded.
+
+What is the goal of a softmax layer ?
+========================================
+The goal of softmax layer is to turn numbers into probability ************* You must use the softmax layer when the classes are mutually exclusive while sigmoid is used when the classes are independent. If you want to go for multiclassifiction in a logistic regression model, you can go for softmax whereas for binary classification go for sigmoid. 
+
+Softmax layer mathmatical understanding:
+=========================================
+It takes an unnormalized vector as an input and turn it into a normalization vector which is a probability distribution.
+
+Application of softmax function:
+======================================
+==> Neural networks
+==> Reinforcement learning
+==> Softmax normalization
+
