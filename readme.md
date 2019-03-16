@@ -42,4 +42,5 @@ Hi, there in this post I am gonna show you how we can build basic API in Django 
 	<li>urls.py : it is very important file here you can define route of your app urls</li>
 	<li><strong>views.</strong>py : it is the most important file where you can define funtion to perform various operation</li>
 </ol>
- 
+ <h2><b>Output:</b></h2>
+  ![django vowel api](https://github.com/rajat4665/vowel-count-django-api/blob/master/Screenshot.png)
